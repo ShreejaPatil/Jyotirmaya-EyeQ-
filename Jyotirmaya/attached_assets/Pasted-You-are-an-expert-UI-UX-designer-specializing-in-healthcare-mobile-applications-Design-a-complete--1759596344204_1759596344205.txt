@@ -1,0 +1,121 @@
+You are an expert UI/UX designer specializing in healthcare mobile applications. Design a complete, user-friendly, and accessible UI for EyeHealthAI, a mobile app developed with the Dhole Foundation and Galaxy Hospital (Pune, India) to address eye health challenges in underserved communities. The app allows users to capture smartphone eye photos, analyze them with AI for conditions like cataracts (lens opacity), squint (eye misalignment), and allergies (redness/swelling/discharge), generate instant patient reports, share anonymized leads with Galaxy Hospital for follow-up (calls/emails/counseling), and enable online appointment booking. The UI must be intuitive (max 3 taps to key actions), inclusive (multi-language, accessible for low-vision users), and optimized for low-end smartphones in rural Pune.
+Core UI Design Requirements (Cover All Precisely):
+
+App Purpose & Context:
+
+Enable early detection of cataracts, squint, and allergies for underserved users.
+Support Dhole Foundation’s community health camps and Galaxy Hospital’s lead generation/booking.
+Emphasize simplicity, trust (clear disclaimers: AI is preliminary, not diagnostic), and engagement (e.g., gamified badges for regular checks).
+
+
+Key Screens & User Flow (Design Each):
+
+Onboarding Screen:
+
+Welcome message; simple signup (email/phone/Google OAuth); consent toggle for data sharing (GDPR/HIPAA-compliant).
+Visual: Clean, calming colors (blue/white); large buttons; animated intro (eye graphic).
+
+
+Home/Dashboard:
+
+Quick actions: “Scan Eye,” “View Reports,” “Book Appointment,” “Profile.”
+Display recent scan summary or nudge to scan; progress bar for eye health checks (gamification).
+Visual: Card-based layout; minimal text; icons for actions.
+
+
+Image Capture Screen:
+
+Guided camera interface with AR overlays (e.g., green frame for eye alignment, red warning for poor lighting).
+Real-time feedback: “Move closer,” “Better light needed”; option to upload from gallery.
+Visual: Full-screen camera with bold, centered guides; cancel/confirm buttons.
+
+
+Results/Report Screen:
+
+Display AI analysis (e.g., “Potential Cataract: Moderate, Right Eye”); severity bar (mild/moderate/severe); heatmap (via Grad-CAM) highlighting issue areas.
+Educational tips (e.g., “Avoid rubbing eyes for allergies”); shareable PDF report button.
+CTA: “Book with Galaxy Hospital” or “Learn More.”
+Visual: Clean report card; color-coded severity (green/yellow/red); large text for readability.
+
+
+Booking Screen:
+
+Calendar picker for Galaxy Hospital slots; specialty filter (e.g., ophthalmology); confirm/cancel buttons.
+Push notification toggle for reminders; integration with hospital CRM.
+Visual: Simple grid calendar; bold available slots; multi-language labels.
+
+
+Profile/Settings Screen:
+
+View past reports; manage consent (data sharing for leads); language toggle (English/Hindi/Marathi); accessibility settings (font size, voice-over).
+Visual: Tabbed layout; toggle switches; export data option.
+
+
+
+
+UI Design Principles:
+
+Intuitive: Max 3 taps to scan/report/book; clear icons (e.g., eye for scan, calendar for booking).
+Accessible: High-contrast mode (WCAG 2.1 compliant); large fonts (min 16px); voice-over support (e.g., TalkBack/Siri); multi-language (English/Hindi/Marathi for Pune/rural users).
+Inclusive: Visual cues for low-literacy users (icons over text); culturally relevant imagery (e.g., Indian motifs in onboarding).
+Engaging: Gamification (badges for scans: “Eye Health Star”); subtle animations (e.g., loading spinner as an eye).
+Low-Resource Optimized: Lightweight assets; offline-friendly (cache reports); fast load on 3G/low-end devices.
+
+
+Visual Style:
+
+Color Palette: Blue (#007BFF, trust/health), White (#FFFFFF, clean), Green (#28A745, success), Yellow/Red (#FFC107/#DC3545, severity alerts).
+Typography: Sans-serif (e.g., Roboto or Poppins) for readability; bold headers (20-24px), body (16-18px).
+Icons: Material Design icons (e.g., camera, calendar, eye); large, tappable (min 48x48dp).
+Theme: Light mode default; dark mode option for low-light comfort.
+Animations: Subtle transitions (e.g., fade-in for reports); AR overlays for capture; loading spinner (eye-shaped).
+
+
+Technology Integration:
+
+Built with React Native (cross-platform iOS/Android); TypeScript for maintainability.
+Camera: CameraX (Android), AVFoundation (iOS) for real-time feedback.
+Accessibility: Integrate with React Native Accessibility API; support screen readers.
+Offline: Cache reports in AsyncStorage; sync leads/bookings when online.
+
+
+Pune-Specific Context:
+
+Design for Galaxy Hospital (Narhe/Bhosari) and Dhole Foundation camps.
+Localize for Pune’s urban/rural mix: Marathi/Hindi text; simple visuals for low-literacy users.
+Benchmark against local hospitals (e.g., H.V. Desai, Dr. Agarwals) with AI screening but no full patient-facing app for cataracts/squint/allergies + lead gen/booking.
+
+
+Competitive Analysis:
+
+No Pune hospital offers a single app with patient photo upload → AI report → lead sharing (calls/emails) → booking for cataracts/squint/allergies. Closest: H.V. Desai (camp-based AI), Dr. Agarwals (in-clinic AI + booking). Ensure EyeHealthAI stands out with seamless end-to-end flow and accessibility.
+
+
+Deliverables:
+
+Wireframes: Mermaid diagrams for each screen (Onboarding, Home, Capture, Results, Booking, Profile).
+Figma-Style Descriptions: Detailed visual specs (colors, sizes, spacing) for each screen; include pixel-perfect layouts (e.g., button padding: 16px).
+Accessibility Checklist: WCAG compliance details (e.g., contrast ratios, ARIA labels).
+Prototype Flow: User journey map (Mermaid flowchart) from onboarding to booking.
+Sample Assets: Example icons/buttons; color palette table; typography guide.
+Code Snippets: React Native component examples (e.g., Camera screen, Report card).
+Ethical Notes: Privacy consent UI (clear toggles); disclaimer placement (e.g., “AI is not a doctor” on Results screen).
+
+
+Constraints & Mitigations:
+
+Low-End Devices: Optimize assets (compress images <100KB); lazy-load components.
+Low-Vision Users: High-contrast toggle; voice feedback for results.
+Cultural Fit: Use familiar Pune imagery (e.g., Shaniwar Wada motifs in backgrounds).
+Regulatory: Include CDSCO-compliant disclaimers; consent UI for data sharing.
+
+
+
+Output Format:
+
+Markdown with clear sections (Overview, Screens, Visual Style, Accessibility, Code Snippets, etc.).
+Mermaid diagrams for wireframes and user flow.
+Table for color palette/typography/icons.
+Figma-style descriptions (e.g., “Button: 48x48dp, #007BFF, 16px padding, rounded 8px”).
+Sample React Native code for 1-2 key components (e.g., Camera, Report).
+Ensure output is actionable for a small team (2-3 designers/devs) to prototype in Figma/XD and implement in 4-6 weeks.
